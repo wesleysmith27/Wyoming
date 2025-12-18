@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  background-color: #fdfdfd;
+}
+
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 50px;
+  position: sticky; 
+  top: 0;
+  z-index: 100;
+}
+
+.overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-image: url('67kid.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0077b6;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  color: #0077b6;
+  transform: scale(1.05);
+}
+
+.search {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.stuff {
+  background-image: url(gettyimages-540063269.avif);
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;  
+  color: white;
+  text-align: center;
+  padding: 140px 20px;           
+  position: relative;
+}
+
+.stuff-content {
+  position: relative;
+  z-index: 2; 
+}
+
+.stuff-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.stuff-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.stuff-content button {
+  background: white;
+  color: #0077b6;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.stuff-content button:hover {
+  background: #023e8a;
+  color: white;
+}
+
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+section h2 {
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.stuff:hover .overlay {
+  opacity: 1;
+}
+
+.athlete {
+  padding: 80px 10%;
+  color: #222;
+}
+
+.athlete.track {
+  background: #f8f9fa;
+}
+
+.athlete.xc {
+  background: #e0f7fa;
+}
+
+.athlete-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.athlete-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.athlete-info {
+  max-width: 500px;
+}
+
+.athlete-info h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.athlete-info h3 {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #023e8a;
+}
+
+.athlete-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.athlete-info ul li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none;
+}
+/*
+   AI Takeover holy crap take cover. 67 kid drank too much juice
+
+*/
+
+/* Permanent AI color filter on my beutiful wyoming landscape thats being invaded */
+.ai-active {
+  /* Just some wild colors to make the hero pop */
+  filter: hue-rotate(140deg) brightness(1.2);
+  transition: filter 0.5s ease; /* smoothish transition */
+}
+
+/* AI pulse effect so like a quick flash of 67 energy */
+.ai-pulse {
+  position: fixed;       /* sits on top of everything */
+  inset: 0;              /* stretch all the way */
+  background: rgba(0, 229, 255, 0.2); /* neon-y AI glow */
+  pointer-events: none;  /* doesn’t mess with clicks */
+  z-index: 250;          /* above normal content but below modal stuff */
+  opacity: 0;            /* start invisible */
+  animation: pulseFlash 0.8s ease-in-out forwards; /* quick flash then gone */
+}
+
+/* Keyframes for the pulse, fade in, then out */
+@keyframes pulseFlash {
+  0% { opacity: 0; }
+  50% { opacity: 0.6; } /* peak intensity */
+  100% { opacity: 0; }  /* disappear */
+}
+
+/* shake for AI mode to show the power of 67 kid when he lands*/
+.ai-shake {
+  animation: shakeHero 0.5s ease-in-out infinite alternate; /* tiny jitter, very dramatic */
+}
+
+/* shake movement details */
+@keyframes shakeHero {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(3px, -2px); }
+  50% { transform: translate(-3px, 2px); }
+  75% { transform: translate(2px, -1px); }
+  100% { transform: translate(0, 0); }
+}
